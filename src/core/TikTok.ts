@@ -254,7 +254,7 @@ export class TikTokScraper extends EventEmitter {
     private get folderDestination(): string {
         switch (this.scrapeType) {
             case 'user':
-                return this.filepath ? `${this.filepath}/${this.input}` : this.input;
+                return this.filepath ? `${this.filepath}` : this.input;
             case 'hashtag':
                 return this.filepath ? `${this.filepath}/#${this.input}` : `#${this.input}`;
             case 'music':
